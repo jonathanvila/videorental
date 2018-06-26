@@ -1,7 +1,10 @@
-package org.jonathanvila.infrastructure.rest;
+package org.jonathanvila.infrastructure.camel;
 
 import org.apache.camel.builder.RouteBuilder;
 
+import javax.inject.Singleton;
+
+@Singleton
 public class FilmRouteBuilder extends RouteBuilder {
 
     @Override
