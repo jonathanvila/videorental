@@ -5,7 +5,9 @@ import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.rest.RestBindingMode;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
+@Singleton
 public class VideoRentalRouteBuilder extends RouteBuilder {
 
     @Inject
