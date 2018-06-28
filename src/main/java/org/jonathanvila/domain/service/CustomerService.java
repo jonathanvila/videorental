@@ -10,13 +10,22 @@ import javax.inject.Singleton;
 import java.util.List;
 
 @Singleton
-@Named("customerBean")
+@Named("customerService")
 public class CustomerService {
+
     @Inject
     @Named("customerMemoryRepository")
     private CustomerRepository repository;
 
     public List<Customer> getAll() {
         return repository.getAll();
+    }
+
+    public Customer get(Long id) {
+        return repository.get(id);
+    }
+
+    public Long add(Customer customer) {
+        return repository.add(customer);
     }
 }
